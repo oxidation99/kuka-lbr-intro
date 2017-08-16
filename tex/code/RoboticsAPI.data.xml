@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<RoboticsAPIData version="3">
+    <world>
+        <gravitation x="0.0" y="0.0" z="9.81"/>
+        <frame name="P1">
+            <transformation a="0.0" b="0.0" c="0.0" x="0.0" y="0.0" z="0.0"/>
+            <additionalInformation>
+                <info key="LastModificationTime" type="java.lang.Long" value="1496420387610"/>
+            </additionalInformation>
+        </frame>
+        <frame name="P2">
+            <transformation a="0.0" b="0.0" c="0.0" x="0.0" y="0.0" z="0.0"/>
+            <additionalInformation>
+                <info key="LastModificationTime" type="java.lang.Long" value="1496420392018"/>
+            </additionalInformation>
+        </frame>
+    </world>
+    <objectTemplates>
+        <toolTemplate class="" defaultMotionFrameRef="/Tip" name="RobotiqPointer">
+            <frames>
+                <frame name="Tip">
+                    <transformation a="0.0" b="0.0" c="0.0" x="0.0" y="0.0" z="186.0"/>
+                    <additionalInformation>
+                        <info key="Radius" type="java.lang.Integer" value="25"/>
+                        <info key="SafetyID" type="java.lang.Integer" value="0"/>
+                    </additionalInformation>
+                </frame>
+            </frames>
+            <additionalInformation>
+                <info key="SafetyID" type="java.lang.Integer" value="0"/>
+                <info key="ToolVelocityPointPath" type="java.lang.String" value="/Tip"/>
+                <info key="ToolVelocityOrientationPath" type="java.lang.String" value="/Tip"/>
+                <info key="OrientationFramePath" type="java.lang.String" value="/Tip"/>
+            </additionalInformation>
+            <loadData cogA="0.0" cogB="0.0" cogC="0.0" cogX="11.769771729754485" cogY="10.894868834220704" cogZ="41.66244658518044" inertiaX="0.0" inertiaY="0.0" inertiaZ="0.0" mass="1.9590866531563598"/>
+        </toolTemplate>
+    </objectTemplates>
+    <processDataContainer>
+        <processData comment="force condition threshold" dataType="java.lang.Double" defaultValue="10" displayName="DAQ Force" id="daqForce" max="100.0" min="0.01" unit="N" value="10"/>
+        <processData comment="cartesian velocity" dataType="java.lang.Double" defaultValue="200" displayName="DAQ Velocity" id="daqVelocity" max="500.0" min="0.01" unit="mm/s" value="200"/>
+    </processDataContainer>
+</RoboticsAPIData>
