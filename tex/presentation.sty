@@ -1,0 +1,38 @@
+% beamer theme
+% https://github.com/matze/mtheme
+% http://ctan.mirror.rafal.ca/macros/latex/contrib/beamer-contrib/themes/metropolis/doc/metropolistheme.pdf
+\usetheme{metropolis}
+
+% imports
+\usepackage{docmute} % build separate files
+\usepackage[english]{babel} % english hyphenation
+\usepackage[utf8]{inputenc} % for accented characters, load before csquotes
+\usepackage{graphicx} % for \graphicspath
+\usepackage{csquotes} % recommended with babel
+\usepackage{lmodern}  % font shape availability warnings
+\usepackage{booktabs} % \toprule, \midrule, \multicolumn
+\usepackage{multirow} % \multirow
+\usepackage[per-mode=symbol]{siunitx}  % unit formatting
+\usepackage{listings} % code blocks
+\usepackage{caption}  % subfigure environment
+\usepackage{subcaption}  % subfigure environment
+\usepackage[capitalise]{cleveref} % easy referencing
+\usepackage[
+backend=bibtex,
+style=ieee,
+doi=false,
+isbn=false,
+url=false,
+]{biblatex} % https://www.sharelatex.com/learn/Bibliography_management_in_LaTeX
+
+% biblatex settings
+\addbibresource{kuka-collaborative-poke.bib}
+
+% siunitx match IEEE font weight
+\sisetup{detect-weight=true, detect-family=true}
+
+% fix hyphenation of already hyphened words (i.e., L-BFGS-B)
+\exhyphenpenalty=10000
+
+% figure subfolder
+\graphicspath{{./fig/}}
