@@ -1,0 +1,125 @@
+\documentclass{beamer}
+\usepackage{presentation}
+
+\begin{document}
+\section{Force Contact}
+
+\begin{frame}{Initialization}
+  \metroset{block=fill}
+  \begin{block}{DemoForceContactRetract.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=32,
+    lastline=41
+    ]{java}{./code/DemoForceContactRetract.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Initialize the robot, controller, and tool objects
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Application Start}
+  \metroset{block=fill}
+  \begin{block}{DemoForceContactRetract.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=43,
+    lastline=51
+    ]{java}{./code/DemoForceContactRetract.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Tool is loaded onto robot object
+      \item Robot is moved to a start position in joint-space
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Motion Setup}
+  \metroset{block=fill}
+  \begin{block}{DemoForceContactRetract.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=53,
+    lastline=69
+    ]{java}{./code/DemoForceContactRetract.java}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Motion Setup}
+  \metroset{block=fill}
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Define start and end frames
+      \item Define force conditions
+      \begin{itemize}
+        \item Position and orientation of force condition?
+      \end{itemize}
+      \item Define motions objects
+      \begin{itemize}
+        \item Reusable
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Motion Loop}
+  \metroset{block=fill}
+  \begin{block}{DemoForceContactRetract.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=71,
+    lastline=78
+    ]{java}{./code/DemoForceContactRetract.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Loop previously defined motions
+      \item Synchronous move commands
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Move Function}
+  \metroset{block=fill}
+  \begin{block}{DemoForceContactRetract.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=50,
+    lastline=51
+    ]{java}{./code/DemoForceContactRetract.java}
+  \end{block}
+
+  \begin{block}{DemoForceContactRetract.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=73,
+    lastline=74
+    ]{java}{./code/DemoForceContactRetract.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item What's the difference between these two code blocks?
+      \item Are these move commands equivalent? In joint-space? In Cartesian-space?
+    \end{itemize}
+  \end{block}
+\end{frame}
+\end{document}

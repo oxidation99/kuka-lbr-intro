@@ -1,55 +1,82 @@
 \documentclass{beamer}
-\usepackage{../presentation}
+\usepackage{presentation}
 
 \begin{document}
 \section{Sunrise OS}
 
 \begin{frame}{Sunrise Workbench}
   \metroset{block=fill}
+  \begin{figure}
+    \includegraphics[width=\textwidth]{sunrise-workbench}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Sunrise Workbench}
+  \metroset{block=fill}
   \begin{block}{IDE}
-    \begin{itemize}
-      \item Based on Eclipse
-    \end{itemize}
+    \begin{enumerate}
+      \item Project structure
+      \item Active file
+      \item Application data
+    \end{enumerate}
   \end{block}
 
-  \begin{block}{Application Data}
+  \begin{block}{Workflow}
     \begin{itemize}
+      \item Based on Eclipse
       \item Tools, frames, process data are defined in \textit{RoboticsAPI.data.xml}
     \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{Sunrise Workbench}
-  \metroset{block=fill}
-  % TODO: screenshot workbench
-  xxx
-\end{frame}
-
-\begin{frame}[fragile]{Frames}
+\begin{frame}{Frames}
   \metroset{block=fill}
   \begin{block}{RoboticsAPI.data.xml}
-    \inputminted[breaklines,linenos,fontsize=\footnotesize,firstline=5,lastline=10]{xml}{../code/RoboticsAPI.data.xml}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\footnotesize,
+    firstline=5,
+    lastline=10
+    ]{xml}{./code/RoboticsAPI.data.xml}
   \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Tools}
+\begin{frame}{Tools}
   \metroset{block=fill}
   \begin{block}{RoboticsAPI.data.xml}
-    \inputminted[breaklines,linenos,fontsize=\tiny,firstline=19,lastline=36]{xml}{../code/RoboticsAPI.data.xml}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=19,
+    lastline=36
+    ]{xml}{./code/RoboticsAPI.data.xml}
   \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Process Data}
+\begin{frame}{Process Data}
   \metroset{block=fill}
   \begin{block}{RoboticsAPI.data.xml}
-    \inputminted[breaklines,linenos,fontsize=\footnotesize,firstline=38,lastline=41]{xml}{../code/RoboticsAPI.data.xml}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\footnotesize,
+    firstline=38,
+    lastline=41
+    ]{xml}{./code/RoboticsAPI.data.xml}
   \end{block}
 \end{frame}
 
 \begin{frame}{Safety}
   \metroset{block=fill}
-  % TODO: screenshot safety setup
+  \begin{figure}
+    \includegraphics[width=\textwidth]{sunrise-workbench-safety}
+  \end{figure}
+\end{frame}
 
+\begin{frame}{Safety}
+  \metroset{block=fill}
   \begin{block}{}
     \begin{itemize}
       \item Each row describes a safety function composed of Atomic Monitoring Functions (AMF)

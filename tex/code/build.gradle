@@ -1,0 +1,43 @@
+plugins {
+    // https://github.com/google/osdetector-gradle-plugin
+    id "com.google.osdetector" version "1.4.0"
+    id 'java'
+    id 'idea'
+    id 'com.github.johnrengelman.shadow' version '1.2.3'
+}
+
+group 'me.nicholasnadeau'
+
+repositories {
+    mavenCentral()
+
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    if (osdetector.classifier != 'windows-x86_32') {
+        // http://mvnrepository.com/artifact/io.netty/netty-tcnative
+        compile group: 'io.netty', name: 'netty-tcnative', version: '1.1.33.Fork15', classifier: osdetector.classifier
+    }
+
+    // server-client
+    // https://mvnrepository.com/artifact/io.netty/netty-all
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.9.Final'
+
+    // https://jitpack.io/#nnadeau/robot-communication-packet-proto
+    compile 'com.github.nnadeau:robot-communication-packet-proto:0.6.0'
+}
+
+if (project.hasProperty('tag')) {
+    version = project.tag
+} else {
+    version = '0'
+}
+
+shadowJar.archiveName = "$project.name-$project.version-all.jar"
+
+// set java 1.6 compatibility
+sourceCompatibility = 1.6
+targetCompatibility = 1.6

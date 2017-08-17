@@ -1,0 +1,50 @@
+syntax = "proto3";
+package nnadeau.robot;
+
+import "google/protobuf/timestamp.proto";
+
+option java_package = "me.nicholasnadeau.robot";
+option java_outer_classname = "RobotPacketProtos";
+
+message RobotPacket {
+    int64 id = 1;
+
+    google.protobuf.Timestamp timestamp = 2;
+
+    Command command = 3;
+
+    repeated double reference_frame = 4;
+
+    repeated double cartesian_position = 5;
+    repeated double cartesian_velocity = 6;
+    repeated double cartesian_acceleration = 7;
+
+    repeated double external_wrench = 8;
+
+    double alpha_redundancy = 9;
+
+    repeated double external_torque = 10;
+    repeated double measured_torque = 11;
+
+    repeated double joint_position = 12;
+    repeated double joint_velocity = 13;
+    repeated double joint_acceleration = 14;
+
+    repeated double joint_stiffness = 15;
+    repeated double cartesian_stiffness = 16;
+    double null_space_stiffness = 17;
+
+    repeated double joint_damping = 18;
+    repeated double cartesian_damping = 19;
+    double null_space_damping = 20;
+
+    enum Command {
+        ACK = 0;
+        NAK = 1;
+        PING = 2;
+        DATA = 3;
+        MOVE_ABS = 4;
+        MOVE_REL = 5;
+    }
+}
+

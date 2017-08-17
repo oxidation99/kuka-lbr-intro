@@ -30,7 +30,7 @@ import com.kuka.roboticsAPI.motionModel.controlModeModel.CartesianImpedanceContr
  * <p>
  * <b>It is imperative to call <code>super.dispose()</code> when overriding the
  * {@link RoboticsAPITask#dispose()} method.</b>
- * 
+ *
  * @see #initialize()
  * @see #run()
  * @see #dispose()

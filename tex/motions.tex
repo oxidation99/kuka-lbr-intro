@@ -1,0 +1,47 @@
+\documentclass{beamer}
+\usepackage{presentation}
+
+\begin{document}
+\section{Motions}
+
+\begin{frame}{Null-space Motion}
+  \metroset{block=fill}
+  \begin{block}{DemoMotions.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=51,
+    lastline=55
+    ]{java}{./code/DemoMotions.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item E1 redundancy: joint 3 angle
+      \item Alpha redundancy: elbow angle
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Splines}
+  \metroset{block=fill}
+  \begin{block}{DemoMotions.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=93,
+    lastline=103
+    ]{java}{./code/DemoMotions.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Spline segments can be individually defined
+      \item Very smooth motion
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\end{document}

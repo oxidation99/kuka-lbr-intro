@@ -1,0 +1,160 @@
+\documentclass{beamer}
+\usepackage{presentation}
+
+\begin{document}
+\section{Advanced Topics}
+
+\begin{frame}{Data Acquisition}
+  \metroset{block=fill}
+  \begin{block}{PHDDaqPokeAutomated.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=52,
+    lastline=66
+    ]{java}{./code/PHDDaqPokeAutomated.java}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Data Acquisition}
+  \metroset{block=fill}
+  \begin{block}{Details}
+    \begin{itemize}
+      \item \SI{1000}{\hertz} data recording
+      \item A lot of robot data is available
+      \item Can be for machine learning, logging, etc.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Multithreading}
+  \metroset{block=fill}
+  \begin{block}{DAQForceContactRetract.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=51,
+    lastline=61
+    ]{java}{./code/DAQForceContactRetract.java}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Multithreading}
+  \metroset{block=fill}
+  \begin{block}{DAQForceContactRetract.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=88,
+    lastline=97
+    ]{java}{./code/DAQForceContactRetract.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Take advantage of the \textit{java.util.concurrent} library for advanced functionality
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{FRI}
+  \metroset{block=fill}
+  \begin{itemize}
+    \item Real-time server-client communications
+    \item Allows external joint, position, and torque control
+    \item Java API for FRI server on Sunrise controller
+    \item C++ or Java API for FRI client on external PC
+    \item Real-time client OS recommended
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Server-client Communications}
+  \metroset{block=fill}
+  \begin{block}{ServerInitializer.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=26,
+    lastline=40
+    ]{java}{./code/ServerInitializer.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Use 3rd-party libraries such as \textit{Netty}
+      \item \small\url{github.com/nnadeau/robot-communication-java}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Protobuf}
+  \metroset{block=fill}
+  \begin{block}{robot\_packet.proto}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=9,
+    lastline=20
+    ]{yaml}{./code/robot_packet.proto}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Language-neutral protocol definitions
+      \item Auto-generates packet classes for all languages (e.g., Python, Java, C++)
+      \item \small\url{github.com/nnadeau/robot-communication-packet-proto}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{External Libraries}
+  \metroset{block=fill}
+  \begin{block}{build.gradle}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=17,
+    lastline=27
+    ]{groovy}{./code/build.gradle}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Build external packages targeting JDK 1.6
+      \item Import libraries from \textit{Maven}
+      \item Use build tools such as \textit{Gradle}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{State Machines}
+  \metroset{block=fill}
+  \begin{block}{ESMState.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=3,
+    lastline=11
+    ]{java}{./code/ESMState.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Safety states can be context-based
+      \item Finite state machine (FSM) design can be useful for a multi-context application, e.g.:
+      \begin{enumerate}
+        \item Non-collaborative material handling motions
+        \item Collaborative assembly
+        \item Non-collaborative material handling motions
+      \end{enumerate}
+    \end{itemize}
+  \end{block}
+\end{frame}
+\end{document}

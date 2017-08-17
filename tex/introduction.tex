@@ -1,0 +1,37 @@
+\documentclass{beamer}
+\usepackage{presentation}
+
+\begin{document}
+\section{Introduction}
+
+\begin{frame}[standout]
+  \alert{Everything} is an object.
+\end{frame}
+
+\begin{frame}{Programming}
+  \begin{block}{Sunrise Java}
+    \begin{itemize}
+      \item KUKA Sunrise OS and the Sunrise controller are a separate branch of KUKA products
+      \item Programming is performed in Java (JDK 1.6; technically end-of-life)
+      \item Fully utilizes object oriented design (OOD), interfaces, and inheritance
+      \begin{itemize}
+        \item Break down a task into objects that expose behavior (methods) and data (members or attributes) using interfaces
+      \end{itemize}
+      \item Java abstraction allows code to be tested outside of robot controller
+      \item Continuous integration (CI) and reusable code (even outside of robot context)
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Programming}
+  \begin{block}{FANUC Karel}
+    \begin{itemize}
+      \item Derived from Pascal
+      \item Procedural
+      \begin{itemize}
+        \item Break down a programming task into a collection of variables, data structures, and subroutines
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass{beamer}
+\usepackage{presentation}
+
+\begin{document}
+\section{Impedance Control}
+
+\begin{frame}{Initialization}
+  \metroset{block=fill}
+  \begin{block}{DemoImpedance.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=16,
+    lastline=22
+    ]{java}{./code/DemoImpedance.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Initialize static variables
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Impedance Setup}
+  \metroset{block=fill}
+  \begin{block}{DemoImpedance.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=35,
+    lastline=39
+    ]{java}{./code/DemoImpedance.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Parametrize impedance control
+      \begin{itemize}
+        \item Different settings for each axis
+        \item Cartesian vs. joint?
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Move Function}
+  \metroset{block=fill}
+  \begin{block}{DemoImpedance.java}
+    \inputminted[
+    breaklines,
+    linenos,
+    fontsize=\tiny,
+    firstline=41,
+    lastline=52
+    ]{java}{./code/DemoImpedance.java}
+  \end{block}
+
+  \begin{block}{Details}
+    \begin{itemize}
+      \item Asynchronous motion
+      \item SmartPad dialog for application control
+    \end{itemize}
+  \end{block}
+\end{frame}
+\end{document}
