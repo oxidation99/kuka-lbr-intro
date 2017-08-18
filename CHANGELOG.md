@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.1] - 2017-08-18
+### Fixed
+- Fixed GitHub Releases API key in `.travis.yml` 
+
 ## [0.1.0] - 2017-08-18
 ### Added
 - First release
