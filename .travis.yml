@@ -12,6 +12,9 @@ addons:
     - python
     - python-pip
 
+before_install:
+- tex -v
+
 install:
 - cd $TRAVIS_BUILD_DIR/mtheme/source
 - latex beamerthememetropolis.ins
