@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.com/nnadeau/kuka-lbr-intro.svg?token=FN9pU87Hzpg8Cn89F6sm&branch=master)](https://travis-ci.com/nnadeau/kuka-lbr-intro)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nnadeau/kuka-lbr-intro/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/nnadeau/kuka-lbr-intro.svg)](https://github.com/nnadeau/kuka-lbr-intro/releases/latest)
+[![Github All Releases](https://img.shields.io/github/downloads/nnadeau/kuka-lbr-intro/total.svg)](https://github.com/nnadeau/kuka-lbr-intro/releases/latest)
 
 # kuka-lbr-intro
 An introduction to programming the KUKA LBR iiwa robot 
