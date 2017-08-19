@@ -4,3 +4,6 @@
 [submodule "minted"]
 	path = minted
 	url = https://github.com/gpoore/minted.git
+[submodule "fvextra"]
+	path = fvextra
+	url = https://github.com/gpoore/fvextra.git
