@@ -12,6 +12,9 @@ addons:
     - python
     - python-pip
 
+before_install:
+- tex -v
+
 install:
 - cd $TRAVIS_BUILD_DIR/mtheme/source
 - latex beamerthememetropolis.ins
@@ -20,14 +23,14 @@ install:
 
 script:
 - cd $TRAVIS_BUILD_DIR/tex
-- latexmk -pdf presentation.tex
+- latexmk --shell-escape -pdf presentation.tex
 - find $TRAVIS_BUILD_DIR
 
 deploy:
   skip_cleanup: true
   provider: releases
   api_key:
-    secure: ncbx0wlHyXfUB8qvVdEzejbrTOS4cS2CIkcsDb2SHyoK+7BFqoDmu5Zc7/k5Q1IwgTO3ZKGTvqRhHcSvo9pFqDURM3EwPtgYl+3VIX5GfB8dTEsVoigGBZCUKwZXyGA/Z+j8stMyA4xKzOhAuU8GTfeVVcebmflINd/IEEZLHv1qUzZ15jzNo7O7ufsmZBkyhEGFrmZMAgQSi6vOiMH9p6Mz5JaQxzh3CJvJcGxsjY3O2PKUTerlwp65BPBAJVSPIwQ74eVMrK03khfdvuID1OVbuNiaDgejqON8qGni0dy83YtCRVfNJ8iJ+otectRa8RvayfZEYvSUC67IKAMTEkSwVqLxYpXU7qjOW34EG35P6a2EuLEruDhEN86P8R1yThIJYCaaLn8d0iLmi7xmYlOq8t3qgB4yfQMCq61RzumHk40dg7I/UZrk4aAzFndEtJntKBZGNLCJthXCyoOB481oYJikGcE44Me7Hl/FoIpdA/ryIp2gcC2iLe5HBuMhlUZB+Bzbclt9DVzsTsaNs2abI80RehQrqqvyZd1SlJdG56T2TsuoVWwxkVhzuP96/40dZmHF3B5McN/Z7bclvjpd977DPmXwOtOZI8PCzGdrj3hYmy8q9gaRwJ8TFltQHmgGXGALS5czcORWlbtKGz3I2+F0bv89+0OlL6S8mM4=
+    secure: JCMeMGI/99HdJ85DRiIkY+XTZE/1DtPXOieWKTQxZmVNMHyXw49PycI94zG2wjgQpEkF1CqbzdbC3yJleFJkWSfapkYpyZ4BKim9ZHCK881zKZVZT1EA9e1qyo5JkJDGktvyMQeRSJI/fkwcd1K7EKklXbnExPKliA4rHi20Txxv0EQJdcBwC0h9qg2g2BckbwjJE0x6kf5fHHb70JYEfICVp4UJxYZQHP27L3LnZ5egIae0Yoa0fIDkNvme/6THuUHFQ3JZ6d3DAMeDY3UPMQiwr086BHjxaLX5zrHoRbgnXRmK/8TfEbbVn5XXXGMriS/6QgpHV/x4c1KXmCXbGZpi/OqHrEIXbLtbmg8AdMC6UYUguk0BBwOtTMpJOrSG+8I/Ugg2Kg8GdhhAZDhr/dXzl1IA/d7p0BS9SPBJyTYCtb57QcamkCUVq79lvG+IX1sK6zdqstyqjtoW32Cr+4xKgFZIgdyIG3iOmaMjbfEO1JrbSGqUjg9K2nmV/4A2sz50P+zBzAYCHXZJpfneYsZoF+eKbqd8j7OyI+qaqYs4khrdyzI64NSFeCqRKkFp/5J3/2u/7VFlp0PVZT87ffbTSXuFwFT6ukPpJHaj5tMBn3Em4R+lzQsn4m2SY6ZdFFpGCR6jmA+kK0GxCbTS3AdDvy4kYLLPjVMmSru4vPE=
   file: $TRAVIS_BUILD_DIR/tex/presentation.pdf
   on:
     tags: true
