@@ -23,6 +23,7 @@ install:
 # install minted package
 - pip install Pygments
 - mv $TRAVIS_BUILD_DIR/minted/source/minted.sty $TRAVIS_BUILD_DIR/tex
+- mv $TRAVIS_BUILD_DIR/fvextra/fvextra/fvextra.sty $TRAVIS_BUILD_DIR/tex
 
 script:
 - cd $TRAVIS_BUILD_DIR/tex
